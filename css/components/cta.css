@@ -1,0 +1,42 @@
+/* css/components/cta.css */
+
+/* ========= Base Style pour tous les boutons CTA ========= */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  /* ========= Bouton Basique (rempli) ========= */
+  /* Ce bouton présente un fond rempli et un contraste inversé par rapport à la charte couleurs. */
+  .btn--basic {
+    background-color: var(--color-primary);   /* Couleur de fond : off-white */
+    color: var(--color-off-white);             /* Texte en gris anthracite */
+  }
+  
+  /* Optionnel : survol, on assombrit légèrement le fond */
+  .btn--basic:hover {
+    color: var(--color-off-white);
+    background-color: var(--color-primary-hover);
+  }
+  
+  /* ========= Bouton Outlined ========= */
+  /* Ce bouton présente un fond transparent, une bordure et un texte dans la couleur du texte. */
+  .btn--outlined {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+  
+  /* Survol : le bouton outlined se remplit avec la couleur du texte, et le texte passe à la couleur primaire */
+  .btn--outlined:hover {
+    background-color: var(--color-primary);
+    color: var(--color-off-white);
+  }
+  
