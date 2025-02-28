@@ -1,0 +1,34 @@
+/* Overlay de transition/chargement */
+#transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-grey-background);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* L'overlay démarre visible */
+  transform: translateY(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  pointer-events: all;
+}
+
+/* Pour masquer l'overlay (le faire glisser vers le bas) */
+#transition-overlay.hide {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* Pour le cas où l'on souhaite l'animer vers le haut (transition sortante) */
+#transition-overlay.exit {
+  transform: translateY(-100%);
+}
+
+/* Style du logo dans l'overlay */
+.logo-container img {
+  max-width: 150px;
+  width: 100%;
+}
